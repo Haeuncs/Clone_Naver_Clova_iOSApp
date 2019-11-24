@@ -21,7 +21,7 @@ struct DeviceStateRow: View {
       Text("방해금지")
         .font(.system(size: 13))
         .foregroundColor(.gray)
-    }
+    }.frame(minWidth: 0, maxWidth: 70, alignment: .leading)
   }
 }
 

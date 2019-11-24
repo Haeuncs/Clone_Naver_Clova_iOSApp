@@ -25,6 +25,11 @@
 		7DA364E62389C15E0014BAF2 /* DeviceStateRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA364E52389C15E0014BAF2 /* DeviceStateRow.swift */; };
 		7DA364E82389C16B0014BAF2 /* DeviceRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA364E72389C16B0014BAF2 /* DeviceRow.swift */; };
 		7DA364EA2389C1B60014BAF2 /* DeviceStateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA364E92389C1B60014BAF2 /* DeviceStateModel.swift */; };
+		7DA364ED238A2B1A0014BAF2 /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA364EC238A2B190014BAF2 /* PageControl.swift */; };
+		7DA364F1238A2BBC0014BAF2 /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA364F0238A2BBC0014BAF2 /* PageView.swift */; };
+		7DA364F3238A2BD50014BAF2 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA364F2238A2BD50014BAF2 /* PageViewController.swift */; };
+		7DA364F5238A2D420014BAF2 /* DeviceAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA364F4238A2D420014BAF2 /* DeviceAddView.swift */; };
+		7DA364F8238A4DFB0014BAF2 /* speakView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA364F7238A4DFB0014BAF2 /* speakView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +53,11 @@
 		7DA364E52389C15E0014BAF2 /* DeviceStateRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceStateRow.swift; sourceTree = "<group>"; };
 		7DA364E72389C16B0014BAF2 /* DeviceRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceRow.swift; sourceTree = "<group>"; };
 		7DA364E92389C1B60014BAF2 /* DeviceStateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceStateModel.swift; sourceTree = "<group>"; };
+		7DA364EC238A2B190014BAF2 /* PageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
+		7DA364F0238A2BBC0014BAF2 /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
+		7DA364F2238A2BD50014BAF2 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		7DA364F4238A2D420014BAF2 /* DeviceAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceAddView.swift; sourceTree = "<group>"; };
+		7DA364F7238A4DFB0014BAF2 /* speakView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = speakView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +90,7 @@
 		7DA364B223897C9D0014BAF2 /* CloneClova */ = {
 			isa = PBXGroup;
 			children = (
+				7DA364EB238A2AF50014BAF2 /* UIKit */,
 				7DA364DE23899F910014BAF2 /* Rows */,
 				7DA364DB23899D950014BAF2 /* Models */,
 				7DA364CF23897F050014BAF2 /* Views */,
@@ -123,6 +134,7 @@
 		7DA364CF23897F050014BAF2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7DA364F6238A4DE10014BAF2 /* Popup */,
 				7DA364D423897F1F0014BAF2 /* Device */,
 				7DA364D323897F190014BAF2 /* SmartHome */,
 				7DA364D223897F160014BAF2 /* My */,
@@ -168,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				7DA364E32389B7760014BAF2 /* DeviceView.swift */,
+				7DA364F4238A2D420014BAF2 /* DeviceAddView.swift */,
 			);
 			path = Device;
 			sourceTree = "<group>";
@@ -189,6 +202,24 @@
 				7DA364E72389C16B0014BAF2 /* DeviceRow.swift */,
 			);
 			path = Rows;
+			sourceTree = "<group>";
+		};
+		7DA364EB238A2AF50014BAF2 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				7DA364EC238A2B190014BAF2 /* PageControl.swift */,
+				7DA364F0238A2BBC0014BAF2 /* PageView.swift */,
+				7DA364F2238A2BD50014BAF2 /* PageViewController.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		7DA364F6238A4DE10014BAF2 /* Popup */ = {
+			isa = PBXGroup;
+			children = (
+				7DA364F7238A4DFB0014BAF2 /* speakView.swift */,
+			);
+			path = Popup;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,10 +303,15 @@
 				7DA364E82389C16B0014BAF2 /* DeviceRow.swift in Sources */,
 				7DA364E22389ADF10014BAF2 /* SmartHomeView.swift in Sources */,
 				7DA364E62389C15E0014BAF2 /* DeviceStateRow.swift in Sources */,
+				7DA364ED238A2B1A0014BAF2 /* PageControl.swift in Sources */,
 				7DA364CC23897E790014BAF2 /* TabbarView.swift in Sources */,
 				7DA364D6238980E70014BAF2 /* HomeView.swift in Sources */,
 				7DA364D823899B910014BAF2 /* MusicView.swift in Sources */,
+				7DA364F5238A2D420014BAF2 /* DeviceAddView.swift in Sources */,
 				7DA364CE23897EF30014BAF2 /* NavBarView.swift in Sources */,
+				7DA364F3238A2BD50014BAF2 /* PageViewController.swift in Sources */,
+				7DA364F8238A4DFB0014BAF2 /* speakView.swift in Sources */,
+				7DA364F1238A2BBC0014BAF2 /* PageView.swift in Sources */,
 				7DA364B823897C9D0014BAF2 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -417,6 +453,7 @@
 				DEVELOPMENT_TEAM = L47YWQ7AFX;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = CloneClova/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -437,6 +474,7 @@
 				DEVELOPMENT_TEAM = L47YWQ7AFX;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = CloneClova/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

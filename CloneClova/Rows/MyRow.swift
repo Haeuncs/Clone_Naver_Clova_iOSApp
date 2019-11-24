@@ -28,14 +28,17 @@ struct MyRow: View {
           .multilineTextAlignment(.center)
         Spacer()
         if (my.isAdd) {
-          HStack{
-            Image(systemName: "plus").resizable().frame(width: 12, height: 12, alignment: .leading)
-            Spacer()
-            Text("추가").font(.system(size: 13))
-              .fontWeight(.regular)
-          }.frame(width: 56, height: 28, alignment: .trailing)    .overlay(
-            RoundedRectangle(cornerRadius: 12)
-              .stroke(Color.black, lineWidth: 0.6)
+          Button(action: {}) {
+            HStack(spacing:2) {
+              Image(systemName: "plus").resizable()
+                .frame(width: 12, height: 12)
+              Text("추가").font(.system(size: 13))
+                .fontWeight(.regular)
+            }
+          }.foregroundColor(.black)
+            .frame(width: 56, height: 28, alignment: .center)    .overlay(
+              RoundedRectangle(cornerRadius: 12)
+                .stroke(Color.black, lineWidth: 0.6)
           )
         }
       }

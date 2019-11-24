@@ -9,6 +9,10 @@
 import SwiftUI
 
 struct SmartHomeView: View {
+  @State private var isSHowMic = false
+  func closeMic() {
+    isSHowMic = false
+  }
   var body: some View {
     NavigationView {
       ZStack {
@@ -37,28 +41,33 @@ struct SmartHomeView: View {
             }
           }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
           VStack(alignment: .leading) {
-            Text("Hello World")
+            Text("배너위치")
               .font(.title)
-            Text("Another")
-              .font(.body)
             Spacer()
           }
           .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 124 ,alignment: .topLeading)
-          .background(Color.red)
+          .background(Color.blue)
         }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
         
         VStack{
           Spacer()
           HStack {
             Spacer()
-            Image(systemName: "mic.circle.fill").resizable().frame(width: 56, height: 56, alignment: .center)
-              .background(Color.white).cornerRadius(56/2)
-              .foregroundColor(.green).shadow(color: Color(.black).opacity(0.35), radius: 2, x: 0, y: 3).padding(.bottom, 10)
+            Button(action: {
+              self.isSHowMic = true
+            }) {
+              Image(systemName: "mic.circle.fill").resizable().frame(width: 56, height: 56, alignment: .center)
+                .background(Color.white).cornerRadius(56/2)
+                .foregroundColor(.green).shadow(color: Color(.black).opacity(0.35), radius: 2, x: 0, y: 3).padding(.bottom, 10)
+            }
           }
-        }
+        }.padding([.leading,.trailing], 20)
         
+        if isSHowMic {
+          speakView(showingModal: $isSHowMic)
+        }
       }
-        .navigationBarTitle("스마트홈")
+      .navigationBarTitle("스마트홈")
     }
   }
 }

@@ -31,33 +31,58 @@ let settingSection1 = [
   "연결 해제"
 ]
 struct DeviceView: View {
-  var section0Count = 0
-  var section1Count = 0
+  @State var sliderValue = 0.0
+  var minimumValue = 0.0
+  var maximumvalue = 100.0
+  
   init(){
-    self.section0Count = (70 * (settingSection0.count))
-    self.section1Count = 70 * settingSection1.count
+//    UINavigationBar.appearance().backgroundColor = UIColor(red: 249/255, green: 249/255, blue: 249/255, alpha: 1)
   }
   var body: some View {
-    NavigationView {
       
       ScrollView {
         VStack{
+          Spacer().padding(.top, 47)
+          HStack{
+            Text("나의 WAVE")
+              .font(.system(size:34))
+              .fontWeight(.bold)
+            Spacer()
+                HStack {
+                  Button(action: {}) {
+                    Image(systemName: "mic")
+                    Text("음성전송")
+                  }.foregroundColor(.black)
+                    .frame(width:100,height:34)
+                    .overlay(
+                      RoundedRectangle(cornerRadius: 30)
+                        .stroke(Color.black, lineWidth: 1)
+                  )
+              }
+          }
+          Spacer().padding(.top, 7)
+
+        }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 106, maxHeight: 106).padding([.leading,.trailing], 14)
+        .background(Color(red: 249/255, green: 249/255, blue: 249/255))
+        VStack{
+          Spacer().frame(height:40)
           VStack {
             VStack{
               Image("clova")
                 .resizable()
-                .frame(width:200, height: 250)
+                .frame(width:140, height: 200)
               HStack{
                 Image(systemName: "bolt.fill")
                 Image(systemName: "battery.100")
                 Text("100%")
                   .font(.system(size: 16))
                   .fontWeight(.bold)
-              }
-              .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+              }.foregroundColor(.green)
+                .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
             }
           }
-          HStack{
+          Spacer().frame(height:40)
+          HStack(spacing: 0) {
             ForEach(states, id:\.text) { data in
               VStack{
                 HStack {
@@ -70,26 +95,45 @@ struct DeviceView: View {
                 Text(data.text)
                   .font(.system(size: 13))
                   .foregroundColor(.gray)
-              }
-            }
-          }
+              }.frame(minWidth: 0, maxWidth: .infinity)
+            }.frame(minWidth: 0, maxWidth: .infinity)
+          }.frame(minWidth: 0, maxWidth: .infinity)
+          Spacer().frame(height:20)
+          HStack {
+            Image(systemName: "volume.fill")
+              .padding(.trailing, 8)
+            Slider(value: $sliderValue, in: minimumValue...maximumvalue)
+            Image(systemName: "volume.3.fill")
+              .padding(.leading, 8)
+          }.padding([.leading,.trailing], 24)
+          Spacer().frame(height:60)
         }.background(Color(red: 249/255, green: 249/255, blue: 249/255))
+        
         
         VStack{
           ForEach(settingSection0, id: \.self) { data in
             DeviceRow(title: data)
           }
-        }
+        }.padding([.leading,.trailing], 16)
         Divider()
         VStack{
           ForEach(settingSection1, id: \.self) { data in
             DeviceRow(title: data)
           }
+        }.padding([.leading,.trailing], 16)
+        Divider()
+        HStack(spacing:40) {
+          Text("제품 홈페이지")
+          Text("고객지원")
+        }.padding(.top, 24).padding(.bottom,48)
+        VStack(alignment: .leading) {
+          Text("배너위치")
+            .font(.title)
+          Spacer()
         }
+        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 124, maxHeight: 124 ,alignment: .topLeading)
+        .background(Color.red)
       }
-        //      }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
-        .navigationBarTitle("나의 WAVE")
-    }
   }
 }
 

@@ -16,26 +16,26 @@ struct TabbarView: View {
           Image(systemName: "1.circle")
           Text("홈")
       }.tag(0)
-      Text("Second View")
+      MusicView()
         .tabItem {
           Image(systemName: "2.circle")
           Text("뮤직")
       }.tag(1)
-      Text("Second View")
+      MyView()
         .tabItem {
           Image(systemName: "3.circle")
           Text("마이")
-      }.tag(1)
+      }.tag(2)
         SmartHomeView()
         .tabItem {
           Image(systemName: "4.circle")
           Text("스마트홈")
-      }.tag(1)
-      Text("Second View")
+      }.tag(3)
+      DeviceView()
         .tabItem {
           Image(systemName: "5.circle")
           Text("디바이스")
-      }.tag(1)
+      }.tag(4)
     }
   }
 }
