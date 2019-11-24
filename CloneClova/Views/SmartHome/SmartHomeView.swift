@@ -54,7 +54,7 @@ struct SmartHomeView: View {
           HStack {
             Spacer()
             Button(action: {
-              self.isSHowMic = true
+              self.isSHowMic.toggle()
             }) {
               Image(systemName: "mic.circle.fill").resizable().frame(width: 56, height: 56, alignment: .center)
                 .background(Color.white).cornerRadius(56/2)

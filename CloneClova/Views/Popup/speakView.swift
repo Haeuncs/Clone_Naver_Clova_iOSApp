@@ -45,7 +45,7 @@ struct speakView: View {
                 .padding(.bottom,50)
                 HStack {
                   Button(action: {
-                    self.showingModal = false
+                    self.showingModal.toggle()
                   }){
                     Image(systemName: "multiply")
                       .resizable()
