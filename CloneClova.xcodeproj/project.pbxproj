@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D987122238C176100563BC1 /* FullscreenModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D987121238C176100563BC1 /* FullscreenModalView.swift */; };
 		7DA364B423897C9D0014BAF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA364B323897C9D0014BAF2 /* AppDelegate.swift */; };
 		7DA364B623897C9D0014BAF2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA364B523897C9D0014BAF2 /* SceneDelegate.swift */; };
 		7DA364B823897C9D0014BAF2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA364B723897C9D0014BAF2 /* ContentView.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D987121238C176100563BC1 /* FullscreenModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullscreenModalView.swift; sourceTree = "<group>"; };
 		7DA364B023897C9D0014BAF2 /* CloneClova.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloneClova.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DA364B323897C9D0014BAF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7DA364B523897C9D0014BAF2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 			children = (
 				7DA364DC23899DA40014BAF2 /* MyModel.swift */,
 				7DA364E92389C1B60014BAF2 /* DeviceStateModel.swift */,
+				7D987121238C176100563BC1 /* FullscreenModalView.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				7DA364D823899B910014BAF2 /* MusicView.swift in Sources */,
 				7DA364F5238A2D420014BAF2 /* DeviceAddView.swift in Sources */,
 				7DA364CE23897EF30014BAF2 /* NavBarView.swift in Sources */,
+				7D987122238C176100563BC1 /* FullscreenModalView.swift in Sources */,
 				7DA364F3238A2BD50014BAF2 /* PageViewController.swift in Sources */,
 				7DA364F8238A4DFB0014BAF2 /* speakView.swift in Sources */,
 				7DA364F1238A2BBC0014BAF2 /* PageView.swift in Sources */,

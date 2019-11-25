@@ -9,9 +9,9 @@
 import SwiftUI
 
 struct SmartHomeView: View {
-  @State private var isSHowMic = false
+  @Binding var showingModal: Bool
   func closeMic() {
-    isSHowMic = false
+    showingModal = false
   }
   var body: some View {
     NavigationView {
@@ -54,7 +54,7 @@ struct SmartHomeView: View {
           HStack {
             Spacer()
             Button(action: {
-              self.isSHowMic.toggle()
+              self.showingModal.toggle()
             }) {
               Image(systemName: "mic.circle.fill").resizable().frame(width: 56, height: 56, alignment: .center)
                 .background(Color.white).cornerRadius(56/2)
@@ -62,10 +62,7 @@ struct SmartHomeView: View {
             }
           }
         }.padding([.leading,.trailing], 20)
-        
-        if isSHowMic {
-          speakView(showingModal: $isSHowMic)
-        }
+      
       }
       .navigationBarTitle("스마트홈")
     }
@@ -74,6 +71,6 @@ struct SmartHomeView: View {
 
 struct SmartHomeView_Previews: PreviewProvider {
   static var previews: some View {
-    SmartHomeView()
+    SmartHomeView(showingModal: .constant(true))
   }
 }

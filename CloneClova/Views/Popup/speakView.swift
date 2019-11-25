@@ -18,7 +18,7 @@ struct speakView: View {
   var body: some View {
     ZStack {
       // The Custom Popup is on top of the screen
-//      if $showingModal.wrappedValue {
+      if $showingModal.wrappedValue {
         // But it will not show unless this variable is true
         ZStack {
           Spacer()
@@ -65,7 +65,7 @@ struct speakView: View {
           }
         }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .bottom)
         .edgesIgnoringSafeArea(.all)
-//      }
+      }
     }
   }
 }

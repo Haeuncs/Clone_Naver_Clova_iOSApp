@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct MusicView: View {
+  @Binding var showingModal: Bool
   var body: some View {
     NavigationView {
       ZStack {
@@ -17,9 +18,13 @@ struct MusicView: View {
           Spacer()
           HStack {
             Spacer()
-            Image(systemName: "mic.circle.fill").resizable().frame(width: 56, height: 56, alignment: .center)
-              .background(Color.white).cornerRadius(56/2)
-              .foregroundColor(.green).shadow(color: Color(.black).opacity(0.35), radius: 2, x: 0, y: 3).padding(.bottom, 10)
+            Button(action: {
+              self.showingModal.toggle()
+            }) {
+              Image(systemName: "mic.circle.fill").resizable().frame(width: 56, height: 56, alignment: .center)
+                .background(Color.white).cornerRadius(56/2)
+                .foregroundColor(.green).shadow(color: Color(.black).opacity(0.35), radius: 2, x: 0, y: 3).padding(.bottom, 10)
+            }
           }
         }.padding([.leading,.trailing], 20)
 
@@ -31,6 +36,6 @@ struct MusicView: View {
 
 struct MusicView_Previews: PreviewProvider {
   static var previews: some View {
-    MusicView()
+    MusicView(showingModal: .constant(false))
   }
 }

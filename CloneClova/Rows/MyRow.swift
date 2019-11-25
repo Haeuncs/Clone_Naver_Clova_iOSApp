@@ -22,9 +22,10 @@ struct MyRow: View {
   }
   var body: some View {
     VStack{
+      Spacer().frame(height:15)
       HStack{
         Text(my.title).font(.system(size: 19))
-          .fontWeight(.medium)
+          .fontWeight(.semibold)
           .multilineTextAlignment(.center)
         Spacer()
         if (my.isAdd) {
@@ -42,11 +43,24 @@ struct MyRow: View {
           )
         }
       }
-      List(my.descriptions, id: \.self) { description in
-        Text("\"\(description)\"").font(.system(size: 20))
-          .fontWeight(.regular)
-          .foregroundColor(.gray)
-      }.padding(.horizontal, -16)
+      Spacer().frame(height:10)
+      VStack(spacing: 0) {
+        ForEach(my.descriptions, id:\.self) { description in
+          Text("\"\(description)\"").font(.system(size: 20))
+            .fontWeight(.regular)
+            .foregroundColor(.gray)
+            .padding(.bottom, 10)
+        }.frame(minWidth: 0, maxWidth: .infinity, alignment:.topLeading)
+      }
+
+//      frame(alignment:.leading)
+      //      List(my.descriptions, id: \.self) { description in
+      //        Text("\"\(description)\"").font(.system(size: 20))
+      //          .fontWeight(.regular)
+      //          .foregroundColor(.gray)
+      //          .background(Color.red)
+      //      }.padding(.horizontal, -16)
+      //        .padding(.bottom,10)
       Spacer()
     }.frame(height:136)
   }

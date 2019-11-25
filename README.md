@@ -6,11 +6,12 @@ SwiftUI 공부를 위한 프로젝트 👩🏻‍💻
 
 
 
-<img src="Image/image1.png" width="500" />
 
-<img src="Image/image2.png" width="500" />
+<img src="Image/image1.png" width="1000" />
 
-<img src="Image/image3.png" width="500" />
+<img src="Image/image2.png" width="1000" />
+
+<img src="Image/image3.png" width="1000" />
 
 
 
