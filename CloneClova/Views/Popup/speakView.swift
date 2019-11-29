@@ -11,10 +11,10 @@ import SwiftUI
 struct speakView: View {
   
   @Binding var showingModal: Bool
-
-//  init(_ visible: Binding<Bool>) {
-//    self.showingModal = visible.wrappedValue
-//  }
+  
+  //  init(_ visible: Binding<Bool>) {
+  //    self.showingModal = visible.wrappedValue
+  //  }
   var body: some View {
     ZStack {
       // The Custom Popup is on top of the screen
@@ -31,18 +31,18 @@ struct speakView: View {
             Spacer()
             VStack(alignment: .leading) {
               Text("듣고 있어요")
-                .foregroundColor(.green)
-              .font(.system(size: 20))
-              .fontWeight(.bold)
+                .foregroundColor(Color.custom.theme)
+                .font(.system(size: 20))
+                .fontWeight(.bold)
                 .padding(.top,11)
                 .padding(.leading,16)
               ZStack {
                 Button(action: {
                   
                 }){
-                  Circle().frame(width: 110,height:110).foregroundColor(Color.green)
+                  Circle().frame(width: 110,height:110).foregroundColor(Color.custom.theme)
                 }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 324, alignment: .center)
-                .padding(.bottom,50)
+                  .padding(.bottom,50)
                 HStack {
                   Button(action: {
                     self.showingModal.toggle()
@@ -50,7 +50,7 @@ struct speakView: View {
                     Image(systemName: "multiply")
                       .resizable()
                       .frame(width:20,height:20)
-                    .foregroundColor(.black)
+                      .foregroundColor(.black)
                   }
                   Spacer()
                   Image(systemName: "keyboard")
@@ -64,7 +64,7 @@ struct speakView: View {
             .background(Color.white)
           }
         }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .bottom)
-        .edgesIgnoringSafeArea(.all)
+          .edgesIgnoringSafeArea(.all)
       }
     }
   }

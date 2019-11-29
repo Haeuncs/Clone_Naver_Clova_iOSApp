@@ -8,6 +8,19 @@
 
 import SwiftUI
 
+extension Color {
+  static let theme: Color  =
+    Color(#colorLiteral(red: 0, green: 0.7807805538, blue: 0.5183060765, alpha: 1))
+}
+//struct Custom {
+//  let Base = BaseColor()
+//}
+//struct BaseColor {
+//  let theme: Color  =
+//    Color(#colorLiteral(red: 0, green: 0.7807805538, blue: 0.5183060765, alpha: 1))
+//  
+//}
+
 struct SmartHomeView: View {
   @Binding var showingModal: Bool
   func closeMic() {
@@ -58,7 +71,8 @@ struct SmartHomeView: View {
             }) {
               Image(systemName: "mic.circle.fill").resizable().frame(width: 56, height: 56, alignment: .center)
                 .background(Color.white).cornerRadius(56/2)
-                .foregroundColor(.green).shadow(color: Color(.black).opacity(0.35), radius: 2, x: 0, y: 3).padding(.bottom, 10)
+                .foregroundColor(.green)
+                .shadow(color: Color(.black).opacity(0.35), radius: 2, x: 0, y: 3).padding(.bottom, 10)
             }
           }
         }.padding([.leading,.trailing], 20)

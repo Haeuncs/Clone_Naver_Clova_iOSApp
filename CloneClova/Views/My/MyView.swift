@@ -23,7 +23,7 @@ struct MyView: View {
         List(MyDatas, id: \.title) { data in
           MyRow(data)
         }
-
+        
         VStack{
           Spacer()
           HStack {
@@ -33,13 +33,14 @@ struct MyView: View {
             }) {
               Image(systemName: "mic.circle.fill").resizable().frame(width: 56, height: 56, alignment: .center)
                 .background(Color.white).cornerRadius(56/2)
-                .foregroundColor(.green).shadow(color: Color(.black).opacity(0.35), radius: 2, x: 0, y: 3).padding(.bottom, 10)
+                .foregroundColor(Color.custom.theme)
+                .shadow(color: Color(.black).opacity(0.35), radius: 2, x: 0, y: 3).padding(.bottom, 10)
             }
           }
         }.padding([.leading,.trailing], 20)
-
+        
       }
-        .navigationBarTitle("마이")
+      .navigationBarTitle("마이")
     }
   }
 }

@@ -24,7 +24,8 @@ struct MyRow: View {
     VStack{
       Spacer().frame(height:15)
       HStack{
-        Text(my.title).font(.system(size: 19))
+        Text(my.title)
+          .font(.system(size: 19))
           .fontWeight(.semibold)
           .multilineTextAlignment(.center)
         Spacer()
@@ -48,7 +49,7 @@ struct MyRow: View {
         ForEach(my.descriptions, id:\.self) { description in
           Text("\"\(description)\"").font(.system(size: 20))
             .fontWeight(.regular)
-            .foregroundColor(.gray)
+            .foregroundColor(Color.custom.grey)
             .padding(.bottom, 10)
         }.frame(minWidth: 0, maxWidth: .infinity, alignment:.topLeading)
       }

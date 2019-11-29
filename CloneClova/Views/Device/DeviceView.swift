@@ -77,7 +77,7 @@ struct DeviceView: View {
                 Text("100%")
                   .font(.system(size: 16))
                   .fontWeight(.bold)
-              }.foregroundColor(.green)
+              }.foregroundColor(Color.custom.theme)
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
             }
           }
