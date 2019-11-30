@@ -18,7 +18,7 @@ class MusicFetcher: ObservableObject {
       do {
         let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
         let result = try JSONDecoder().decode(MusicTracks.self, from: data)
-        print(result.data)
+//        print(result.data)
         musics = result.data
 //        let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
 //        if let jsonResult = jsonResult as? Dictionary<String, AnyObject>, let data = jsonResult["data"] as? [Any] {

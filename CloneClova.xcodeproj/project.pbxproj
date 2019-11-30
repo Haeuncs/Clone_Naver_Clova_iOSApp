@@ -10,6 +10,17 @@
 		7D56447E23901ACA00AE745A /* MusicData.json in Resources */ = {isa = PBXBuildFile; fileRef = 7D56447D23901ACA00AE745A /* MusicData.json */; };
 		7D5644802390215A00AE745A /* MusicTypeRow0.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D56447F2390215A00AE745A /* MusicTypeRow0.swift */; };
 		7D5644832390230F00AE745A /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 7D5644822390230F00AE745A /* URLImage */; };
+		7D63E8D72392B737005197AA /* MemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D63E8D62392B737005197AA /* MemoView.swift */; };
+		7D63E8D92392B87F005197AA /* MultilineTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D63E8D82392B87F005197AA /* MultilineTextView.swift */; };
+		7D63E8DB2392C2BB005197AA /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D63E8DA2392C2BB005197AA /* BlurView.swift */; };
+		7D63E8DE2392CE5F005197AA /* KeyboardObserving in Frameworks */ = {isa = PBXBuildFile; productRef = 7D63E8DD2392CE5F005197AA /* KeyboardObserving */; };
+		7D63E8E12392D2E1005197AA /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D63E8E02392D2E1005197AA /* UIApplication.swift */; };
+		7D63E8E32392D71E005197AA /* DimView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D63E8E22392D71E005197AA /* DimView.swift */; };
+		7D904DFB23925986004AEAE8 /* MemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D904DFA23925986004AEAE8 /* MemoCell.swift */; };
+		7D904DFF239259AD004AEAE8 /* MemoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D904DFE239259AD004AEAE8 /* MemoListView.swift */; };
+		7D904E03239261CF004AEAE8 /* MemoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D904E02239261CF004AEAE8 /* MemoData.swift */; };
+		7D904E0523928208004AEAE8 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D904E0423928208004AEAE8 /* Memo.swift */; };
+		7D904E0823929A33004AEAE8 /* UserDefaultValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D904E0723929A33004AEAE8 /* UserDefaultValue.swift */; };
 		7D987122238C176100563BC1 /* FullscreenModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D987121238C176100563BC1 /* FullscreenModalView.swift */; };
 		7D987125238D115600563BC1 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D987124238D115600563BC1 /* Color.swift */; };
 		7D9D7264238FF11700F6D8A6 /* ServerUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9D7263238FF11700F6D8A6 /* ServerUrl.swift */; };
@@ -47,6 +58,16 @@
 /* Begin PBXFileReference section */
 		7D56447D23901ACA00AE745A /* MusicData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MusicData.json; sourceTree = "<group>"; };
 		7D56447F2390215A00AE745A /* MusicTypeRow0.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicTypeRow0.swift; sourceTree = "<group>"; };
+		7D63E8D62392B737005197AA /* MemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoView.swift; sourceTree = "<group>"; };
+		7D63E8D82392B87F005197AA /* MultilineTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultilineTextView.swift; sourceTree = "<group>"; };
+		7D63E8DA2392C2BB005197AA /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		7D63E8E02392D2E1005197AA /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
+		7D63E8E22392D71E005197AA /* DimView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimView.swift; sourceTree = "<group>"; };
+		7D904DFA23925986004AEAE8 /* MemoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoCell.swift; sourceTree = "<group>"; };
+		7D904DFE239259AD004AEAE8 /* MemoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListView.swift; sourceTree = "<group>"; };
+		7D904E02239261CF004AEAE8 /* MemoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoData.swift; sourceTree = "<group>"; };
+		7D904E0423928208004AEAE8 /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
+		7D904E0723929A33004AEAE8 /* UserDefaultValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultValue.swift; sourceTree = "<group>"; };
 		7D987121238C176100563BC1 /* FullscreenModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullscreenModalView.swift; sourceTree = "<group>"; };
 		7D987124238D115600563BC1 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		7D9D7263238FF11700F6D8A6 /* ServerUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerUrl.swift; sourceTree = "<group>"; };
@@ -89,6 +110,7 @@
 			files = (
 				7D5644832390230F00AE745A /* URLImage in Frameworks */,
 				7D9D7269239014A100F6D8A6 /* Alamofire in Frameworks */,
+				7D63E8DE2392CE5F005197AA /* KeyboardObserving in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,8 +121,35 @@
 			isa = PBXGroup;
 			children = (
 				7D56447D23901ACA00AE745A /* MusicData.json */,
+				7D904E02239261CF004AEAE8 /* MemoData.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		7D63E8DF2392D2CC005197AA /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				7D63E8E02392D2E1005197AA /* UIApplication.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		7D904DF92392596B004AEAE8 /* Memo */ = {
+			isa = PBXGroup;
+			children = (
+				7D904DFA23925986004AEAE8 /* MemoCell.swift */,
+				7D904DFE239259AD004AEAE8 /* MemoListView.swift */,
+				7D63E8D62392B737005197AA /* MemoView.swift */,
+			);
+			path = Memo;
+			sourceTree = "<group>";
+		};
+		7D904E0623929A0E004AEAE8 /* Property */ = {
+			isa = PBXGroup;
+			children = (
+				7D904E0723929A33004AEAE8 /* UserDefaultValue.swift */,
+			);
+			path = Property;
 			sourceTree = "<group>";
 		};
 		7D987123238D114400563BC1 /* DesignSystem */ = {
@@ -139,6 +188,8 @@
 		7DA364B223897C9D0014BAF2 /* CloneClova */ = {
 			isa = PBXGroup;
 			children = (
+				7D63E8DF2392D2CC005197AA /* Extension */,
+				7D904E0623929A0E004AEAE8 /* Property */,
 				7DDC320A239028DB002EA059 /* List */,
 				7D56447B23901A9200AE745A /* Data */,
 				7D9D7262238FF10A00F6D8A6 /* Network */,
@@ -187,6 +238,7 @@
 		7DA364CF23897F050014BAF2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7D904DF92392596B004AEAE8 /* Memo */,
 				7DA364F6238A4DE10014BAF2 /* Popup */,
 				7DA364D423897F1F0014BAF2 /* Device */,
 				7DA364D323897F190014BAF2 /* SmartHome */,
@@ -245,6 +297,7 @@
 				7DA364DC23899DA40014BAF2 /* MyModel.swift */,
 				7DA364E92389C1B60014BAF2 /* DeviceStateModel.swift */,
 				7D987121238C176100563BC1 /* FullscreenModalView.swift */,
+				7D904E0423928208004AEAE8 /* Memo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -268,6 +321,9 @@
 				7DA364EC238A2B190014BAF2 /* PageControl.swift */,
 				7DA364F0238A2BBC0014BAF2 /* PageView.swift */,
 				7DA364F2238A2BD50014BAF2 /* PageViewController.swift */,
+				7D63E8D82392B87F005197AA /* MultilineTextView.swift */,
+				7D63E8DA2392C2BB005197AA /* BlurView.swift */,
+				7D63E8E22392D71E005197AA /* DimView.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -307,6 +363,7 @@
 			packageProductDependencies = (
 				7D9D7268239014A100F6D8A6 /* Alamofire */,
 				7D5644822390230F00AE745A /* URLImage */,
+				7D63E8DD2392CE5F005197AA /* KeyboardObserving */,
 			);
 			productName = CloneClova;
 			productReference = 7DA364B023897C9D0014BAF2 /* CloneClova.app */;
@@ -339,6 +396,7 @@
 			packageReferences = (
 				7D9D7267239014A000F6D8A6 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				7D5644812390230F00AE745A /* XCRemoteSwiftPackageReference "url-image" */,
+				7D63E8DC2392CE5E005197AA /* XCRemoteSwiftPackageReference "KeyboardObserving" */,
 			);
 			productRefGroup = 7DA364B123897C9D0014BAF2 /* Products */;
 			projectDirPath = "";
@@ -368,21 +426,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D63E8D72392B737005197AA /* MemoView.swift in Sources */,
 				7DA364DA23899C650014BAF2 /* MyView.swift in Sources */,
+				7D904DFF239259AD004AEAE8 /* MemoListView.swift in Sources */,
 				7DA364DD23899DA40014BAF2 /* MyModel.swift in Sources */,
+				7D63E8DB2392C2BB005197AA /* BlurView.swift in Sources */,
 				7DA364EA2389C1B60014BAF2 /* DeviceStateModel.swift in Sources */,
 				7DA364E42389B7760014BAF2 /* DeviceView.swift in Sources */,
 				7DA364B423897C9D0014BAF2 /* AppDelegate.swift in Sources */,
+				7D63E8E12392D2E1005197AA /* UIApplication.swift in Sources */,
+				7D904E0523928208004AEAE8 /* Memo.swift in Sources */,
 				7DA364B623897C9D0014BAF2 /* SceneDelegate.swift in Sources */,
 				7DDC320E23903126002EA059 /* MusicTypeRow1.swift in Sources */,
 				7DA364E023899FA80014BAF2 /* MyRow.swift in Sources */,
+				7D904E0823929A33004AEAE8 /* UserDefaultValue.swift in Sources */,
 				7DA364E82389C16B0014BAF2 /* DeviceRow.swift in Sources */,
+				7D63E8D92392B87F005197AA /* MultilineTextView.swift in Sources */,
 				7DA364E22389ADF10014BAF2 /* SmartHomeView.swift in Sources */,
 				7DDC320C239028E7002EA059 /* MusicList.swift in Sources */,
+				7D904DFB23925986004AEAE8 /* MemoCell.swift in Sources */,
 				7DA364E62389C15E0014BAF2 /* DeviceStateRow.swift in Sources */,
 				7D9D726B2390160D00F6D8A6 /* Network.swift in Sources */,
+				7D63E8E32392D71E005197AA /* DimView.swift in Sources */,
 				7D9D7264238FF11700F6D8A6 /* ServerUrl.swift in Sources */,
 				7DA364ED238A2B1A0014BAF2 /* PageControl.swift in Sources */,
+				7D904E03239261CF004AEAE8 /* MemoData.swift in Sources */,
 				7D5644802390215A00AE745A /* MusicTypeRow0.swift in Sources */,
 				7DA364CC23897E790014BAF2 /* TabbarView.swift in Sources */,
 				7DA364D6238980E70014BAF2 /* HomeView.swift in Sources */,
@@ -602,6 +670,14 @@
 				minimumVersion = 0.9.9;
 			};
 		};
+		7D63E8DC2392CE5E005197AA /* XCRemoteSwiftPackageReference "KeyboardObserving" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nickffox/KeyboardObserving.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.1;
+			};
+		};
 		7D9D7267239014A000F6D8A6 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
@@ -617,6 +693,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7D5644812390230F00AE745A /* XCRemoteSwiftPackageReference "url-image" */;
 			productName = URLImage;
+		};
+		7D63E8DD2392CE5F005197AA /* KeyboardObserving */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7D63E8DC2392CE5E005197AA /* XCRemoteSwiftPackageReference "KeyboardObserving" */;
+			productName = KeyboardObserving;
 		};
 		7D9D7268239014A100F6D8A6 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;

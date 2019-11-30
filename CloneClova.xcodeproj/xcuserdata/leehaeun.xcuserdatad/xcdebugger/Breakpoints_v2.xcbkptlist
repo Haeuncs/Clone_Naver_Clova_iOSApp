@@ -7,96 +7,65 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "736098B8-A968-4380-BFCF-7084E44A46AF"
-            shouldBeEnabled = "Yes"
+            uuid = "2263BF75-5C6D-4AF7-960A-AB15123C3542"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CloneClova/Models/MusicModel.swift"
+            filePath = "CloneClova/Views/Memo/MemoView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "getMusic()"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "createMemo()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "0C4735A4-DEE5-43D3-9DB4-BB45F562409B"
-            shouldBeEnabled = "Yes"
+            uuid = "6A3C386D-39FE-4BFA-80B5-5D699C20AD99"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CloneClova/Models/MusicModel.swift"
+            filePath = "CloneClova/Data/MemoData.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "getMusic()"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "init()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "DD220124-A52E-49FE-A48C-B2A1B9244B47"
+            uuid = "A9DCE8E5-36A7-4F17-BCBB-EF6E876EB228"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CloneClova/Models/MusicModel.swift"
+            filePath = "CloneClova/Data/MemoData.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "getMusic()"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "updateMemo(memo:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "DD220124-A52E-49FE-A48C-B2A1B9244B47 - c24b0703c436fd6f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CloneClova.MusicFetcher.getMusic() -&gt; ()"
-                  moduleName = "CloneClova"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/leehaeun/github/CloneClova/CloneClova/Models/MusicModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28"
-                  offsetFromSymbolStart = "660">
-               </Location>
-               <Location
-                  uuid = "DD220124-A52E-49FE-A48C-B2A1B9244B47 - c24b0703c436fd6f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CloneClova.MusicFetcher.getMusic() -&gt; ()"
-                  moduleName = "CloneClova"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/leehaeun/github/CloneClova/CloneClova/Models/MusicModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28"
-                  offsetFromSymbolStart = "1404">
-               </Location>
-               <Location
-                  uuid = "DD220124-A52E-49FE-A48C-B2A1B9244B47 - c24b0703c436fd6f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CloneClova.MusicFetcher.getMusic() -&gt; ()"
-                  moduleName = "CloneClova"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/leehaeun/github/CloneClova/CloneClova/Models/MusicModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28"
-                  offsetFromSymbolStart = "2232">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E42CF3BE-9606-471C-A3EF-9AECB2BDE3B6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CloneClova/Data/MemoData.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "updateMemo(memo:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -8,8 +8,19 @@
 
 import SwiftUI
 
+let window = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
+let statusBarHeight = window?.windowScene?.statusBarManager?.statusBarFrame.height ?? 0
+let screen = UIScreen.main.bounds
+  
 struct TabbarView: View {
   @State private var isSHowMic = false
+  init() {
+    UINavigationBar.appearance().shadowImage = UIImage()
+    UITableView.appearance().separatorColor = .clear
+    UINavigationBar.appearance().backgroundColor = .white
+    UINavigationBar.appearance().barTintColor = .white
+    UITableViewHeaderFooterView.appearance().tintColor = .white
+  }
   var body: some View {
     ZStack {
       TabView {
@@ -24,6 +35,7 @@ struct TabbarView: View {
             Text("뮤직")
         }.tag(1)
         MyView(showingModal: $isSHowMic)
+          .environmentObject(MemoData())
           .tabItem {
             Image(systemName: "3.circle")
             Text("마이")

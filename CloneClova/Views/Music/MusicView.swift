@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct MusicView: View {
+  @EnvironmentObject var memoData: MemoData
   @Binding var showingModal: Bool
   @ObservedObject var fetcher = MusicFetcher()
   

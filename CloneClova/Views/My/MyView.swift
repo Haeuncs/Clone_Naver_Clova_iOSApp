@@ -16,33 +16,54 @@ let MyDatas = [
 ]
 
 struct MyView: View {
+  @EnvironmentObject var memoData: MemoData
+  
   @Binding var showingModal: Bool
-  var body: some View {
-    NavigationView {
-      ZStack {
-        List(MyDatas, id: \.title) { data in
-          MyRow(data)
-        }
-        
-        VStack{
-          Spacer()
-          HStack {
-            Spacer()
-            Button(action: {
-              self.showingModal.toggle()
-            }) {
-              Image(systemName: "mic.circle.fill").resizable().frame(width: 56, height: 56, alignment: .center)
-                .background(Color.white).cornerRadius(56/2)
-                .foregroundColor(Color.custom.theme)
-                .shadow(color: Color(.black).opacity(0.35), radius: 2, x: 0, y: 3).padding(.bottom, 10)
-            }
-          }
-        }.padding([.leading,.trailing], 20)
-        
-      }
-      .navigationBarTitle("마이")
+  @State var showMemo = false
+  
+  func checkMemoData(data: My) -> AnyView {
+    if (data.title == MyDatas[1].title && !memoData.isEmpty()) {
+      return AnyView(MemoListView(memoData: self._memoData))
+    }else{
+      return AnyView(MyRow(data))
     }
   }
+  var body: some View {
+    
+    ZStack {
+      NavigationView {
+        ZStack {
+          List{
+            ForEach(MyDatas, id: \.title) { data in
+              self.checkMemoData(data: data)
+            }
+          }
+          
+          VStack{
+            Spacer()
+            HStack {
+              Spacer()
+              Button(action: {
+                self.showMemo.toggle()
+                //              self.showingModal.toggle()
+              }) {
+                Image(systemName: "mic.circle.fill").resizable().frame(width: 56, height: 56, alignment: .center)
+                  .background(Color.white).cornerRadius(56/2)
+                  .foregroundColor(Color.custom.theme)
+                  .shadow(color: Color(.black).opacity(0.35), radius: 2, x: 0, y: 3).padding(.bottom, 10)
+              }
+            }
+          }.padding([.leading,.trailing], 20)
+        }
+        .navigationBarTitle("마이")
+      }
+      MemoModal(showProfile: $showMemo)
+        .animation(.spring())
+        .offset(y: showMemo ? 0 : UIScreen.main.bounds.height)
+      
+    }
+  }
+  
 }
 
 struct MyView_Previews: PreviewProvider {
