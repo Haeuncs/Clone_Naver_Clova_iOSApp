@@ -36,6 +36,7 @@ struct TabbarView: View {
         }.tag(1)
         MyView(showingModal: $isSHowMic)
           .environmentObject(MemoData())
+          .environmentObject(TextViewData(text: ""))
           .tabItem {
             Image(systemName: "3.circle")
             Text("마이")

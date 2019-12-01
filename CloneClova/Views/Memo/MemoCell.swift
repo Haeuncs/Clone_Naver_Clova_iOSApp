@@ -11,10 +11,13 @@ import SwiftUI
 struct MemoCell: View {
   
   let memo: Memo
-  
+
   func convertDateToString(date: Date) -> String {
     let df = DateFormatter()
-    df.dateFormat = "yyyy-MM-dd hh:mm:ss"
+    df.locale = Locale(identifier: "ko_KR")
+    df.amSymbol = "오전"
+    df.pmSymbol = "오후"
+    df.dateFormat = "M. dd. E h:mm a"
     return df.string(from: date)
   }
   var body: some View {
@@ -33,7 +36,7 @@ struct MemoCell: View {
         Text(convertDateToString(date: memo.date))
           .foregroundColor(.white)
           .font(.system(size: 14))
-          .fontWeight(.regular)
+          .fontWeight(.light)
           .multilineTextAlignment(.leading)
           .lineLimit(1)
           .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)

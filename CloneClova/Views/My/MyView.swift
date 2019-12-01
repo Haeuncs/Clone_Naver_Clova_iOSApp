@@ -20,12 +20,15 @@ struct MyView: View {
   
   @Binding var showingModal: Bool
   @State var showMemo = false
+  @State var selectUUID: UUID?
   
-  func checkMemoData(data: My) -> AnyView {
+  @State var selectMemo: Memo?
+  
+  func checkMemoData( data: My) -> AnyView {
     if (data.title == MyDatas[1].title && !memoData.isEmpty()) {
-      return AnyView(MemoListView(memoData: self._memoData))
+      return AnyView(MemoListView(memoData: self._memoData, showMemo: $showMemo, selectUUID: $selectUUID, selectMemo: $selectMemo))
     }else{
-      return AnyView(MyRow(data))
+      return AnyView(MyRow(my: data, showMemo: $showMemo))
     }
   }
   var body: some View {
@@ -33,11 +36,16 @@ struct MyView: View {
     ZStack {
       NavigationView {
         ZStack {
-          List{
+          ScrollView{
             ForEach(MyDatas, id: \.title) { data in
-              self.checkMemoData(data: data)
+              Button(action:{}){
+                self.checkMemoData(data: data)
+              }
             }
+            .padding(.horizontal, 16)
           }
+          .buttonStyle(PlainButtonStyle())
+
           
           VStack{
             Spacer()
@@ -57,7 +65,7 @@ struct MyView: View {
         }
         .navigationBarTitle("마이")
       }
-      MemoModal(showProfile: $showMemo)
+      MemoModal(showProfile: $showMemo, selectUUID: $selectUUID, selectMemo: $selectMemo)
         .animation(.spring())
         .offset(y: showMemo ? 0 : UIScreen.main.bounds.height)
       

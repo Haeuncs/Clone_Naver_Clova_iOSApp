@@ -10,16 +10,18 @@ import SwiftUI
 
 struct MyRow: View {
   var my: My
-  
-  init(_ my:My) {
-    // To remove only extra separators below the list:
-    UITableView.appearance().tableFooterView = UIView()
-    
-    // To remove all separators including the actual ones:
-    UITableView.appearance().separatorStyle = .none
-    
-    self.my = my
-  }
+  @Binding var showMemo: Bool
+
+//  init(_ my:My, showMemo: Bool) {
+//    // To remove only extra separators below the list:
+//    UITableView.appearance().tableFooterView = UIView()
+//
+//    // To remove all separators including the actual ones:
+//    UITableView.appearance().separatorStyle = .none
+//
+//    self.my = my
+//    self.showMemo = showMemo
+//  }
   var body: some View {
     VStack{
       Spacer().frame(height:15)
@@ -30,18 +32,25 @@ struct MyRow: View {
           .multilineTextAlignment(.center)
         Spacer()
         if (my.isAdd) {
-          Button(action: {}) {
+          Button(action: {
+            if (self.my.title == MyDatas[1].title){
+              self.showMemo = true
+            }
+          }) {
             HStack(spacing:2) {
               Image(systemName: "plus").resizable()
                 .frame(width: 12, height: 12)
               Text("추가").font(.system(size: 13))
                 .fontWeight(.regular)
             }
-          }.foregroundColor(.black)
-            .frame(width: 56, height: 28, alignment: .center)    .overlay(
-              RoundedRectangle(cornerRadius: 12)
+          }
+          .foregroundColor(.black)
+            .frame(width: 56, height: 28, alignment: .center)
+            .overlay(
+              RoundedRectangle(cornerRadius: 14)
                 .stroke(Color.black, lineWidth: 0.6)
           )
+          .padding(.trailing, 2)
         }
       }
       Spacer().frame(height:10)
@@ -67,8 +76,8 @@ struct MyRow: View {
   }
 }
 
-struct MyRow_Previews: PreviewProvider {
-  static var previews: some View {
-    MyRow(My(title:"리마인더를 등록해 보세요.",descriptions:["30분 뒤에 약 먹으라고 알려줘","아침 10시마다 운동가라고 알려줘"],isAdd:true))
-  }
-}
+//struct MyRow_Previews: PreviewProvider {
+//  static var previews: some View {
+//    MyRow(My(title:"리마인더를 등록해 보세요.",descriptions:["30분 뒤에 약 먹으라고 알려줘","아침 10시마다 운동가라고 알려줘"],isAdd:true))
+//  }
+//}

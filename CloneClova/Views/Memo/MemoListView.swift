@@ -10,45 +10,69 @@ import SwiftUI
 
 struct MemoListView: View {
   @EnvironmentObject var memoData: MemoData
+  @EnvironmentObject var textData: TextViewData
+
+  @Binding var showMemo: Bool
+  @Binding var selectUUID: UUID?
+  @Binding var selectMemo: Memo?
+  
   var body: some View {
     //    List {
-    VStack {
-      VStack{
-        Spacer().frame(height:15)
-        HStack{
-          Text("메모를 작성해 보세요.")
-            .font(.system(size: 19))
-            .fontWeight(.semibold)
-            .multilineTextAlignment(.center)
-          Spacer()
-          if (true) {
-            Button(action: {}) {
-              HStack(spacing:2) {
-                Image(systemName: "plus").resizable()
-                  .frame(width: 12, height: 12)
-                Text("추가").font(.system(size: 13))
-                  .fontWeight(.regular)
-              }
-            }.foregroundColor(.black)
-              .frame(width: 56, height: 28, alignment: .center)    .overlay(
-                RoundedRectangle(cornerRadius: 12)
-                  .stroke(Color.black, lineWidth: 0.6)
-            )
+    
+    VStack{
+      Spacer().frame(height:15)
+      HStack{
+        Text("메모")
+          .font(.system(size: 19))
+          .fontWeight(.semibold)
+          .multilineTextAlignment(.center)
+        Spacer()
+        if (true) {
+          Button(action: {
+            self.textData.reset()
+            self.selectUUID = nil
+            self.selectMemo = nil
+            self.showMemo = true
+          }) {
+            HStack(spacing:2) {
+              Image(systemName: "plus").resizable()
+                .frame(width: 12, height: 12)
+              Text("추가").font(.system(size: 13))
+                .fontWeight(.regular)
+            }
           }
-        }
-        Spacer().frame(height:10)
-        
-        ForEach(self.memoData.memos!) { memo in
-          MemoCell(memo: memo)
-          Spacer().frame(height:6)
-          //      }
+          .foregroundColor(.black)
+            .frame(width: 56, height: 28, alignment: .center)
+            .overlay(
+              RoundedRectangle(cornerRadius: 14)
+                .stroke(Color.black, lineWidth: 0.6)
+          )
+          .padding(.trailing, 2)
         }
       }
+      Spacer().frame(height:10)
+      
+      //        List{
+      ForEach(self.memoData.memos!) { memo in
+        Button(action:{
+          print(memo)
+          self.selectUUID = memo.id
+          self.selectMemo = memo
+          self.textData.text = memo.title
+          self.showMemo = true
+        }){
+          MemoCell(memo: memo)
+        }
+        Spacer().frame(height:6)
+        //      }
+      }
+      //        }
     }
   }
+
 }
-struct MemoListView_Previews: PreviewProvider {
-  static var previews: some View {
-    MemoListView()
-  }
-}
+//struct MemoListView_Previews: PreviewProvider {
+//  static var previews: some View {
+//    MemoListView(selectMemo: co)
+//  }
+//}

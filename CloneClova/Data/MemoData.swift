@@ -20,7 +20,7 @@ class MemoData: ObservableObject {
   }
   
   func isEmpty() -> Bool {
-    if (memos == nil) {
+    if (memos == nil || memos?.count == 0) {
       return true
     }else{
       return false
@@ -45,7 +45,12 @@ class MemoData: ObservableObject {
     newMemo.insert(memo, at: 0)
     let data = try? JSONEncoder().encode(newMemo)
     UserDefaults.standard.set(data, forKey: "Memos")
-    print(memos)
-    print(getMemo())
+    memos = getMemo()
+  }
+  
+  func updateMemos() {
+    let data = try? JSONEncoder().encode(memos)
+    UserDefaults.standard.set(data, forKey: "Memos")
+
   }
 }
